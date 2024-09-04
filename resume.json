@@ -32,21 +32,20 @@
     },
     "work": [
         {
-            "name": "BAZIA",
+            "name": "",
             "position": "Lead FullStack Developer",
             "startDate": "2022-02-28",
-            "endDate": "2023-05-31",
-            "highlights": ["Developed <a href=\"https://smooth.video\">smooth.video</a>", "Created multiple saas products"],
+            "highlights": ["Developed smooth.video", "Created multiple saas products"],
             "url": "https://smooth.video",
             "location": "Montpellier,  France",
-            "skills": [""]
+            "skills": ["Next.js"]
         },
         {
             "name": "ELIA GAMES",
             "position": "Lead FullStack Developer",
             "startDate": "2022-02-28",
             "endDate": "2023-05-31",
-            "highlights": ["Generate thousand of video ads", "Create a platform between ads persons and creative"],
+            "highlights": ["", "Generate thousand of video ads", "Create a platform between ads persons and creative"],
             "url": "https://www.elia.games/",
             "location": "Montpellier,  France",
             "skills": ["Next.js", "GCP", "ffmpeg"]

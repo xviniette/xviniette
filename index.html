@@ -3,29 +3,54 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./style.css" />
-        <title>Vincent Bazia Resume</title>
+        <title>Vincent Bazia</title>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
     <body v-scope @vue:mounted="getJSON">
-        <div v-if="json">
-            <header>
+        <div v-if="json" class="max-w-[960px] p-4 my-0 mx-auto">
+            <header class="flex items-center justify-between p-5 border-b">
                 <div>
-                    <h2>{{json.basics.label}}</h2>
-                    <h1>{{json.basics.name}}</h1>
+                    <h2 class="text-4xl">{{json.basics.label}}</h2>
+                    <h1 class="text-7xl font-bold">{{json.basics.name}}</h1>
                 </div>
 
-                <img :src="json.basics.image" />
+                <img class="rounded-full h-40" :src="json.basics.image" />
             </header>
 
-            <main>
-                <aside>
-                    <section>
-                        <h3>Contact</h3>
+            <main class="flex">
+                <aside class="border-r">
+                    <section class="p-8 border-b">
+                        <h3 class="uppercase text-xl mb-10">Contact</h3>
 
-                        <ul>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <ul class="space-y-2">
+                            <li class="flex gap-2 items-center">
+                                <svg
+                                    class="size-6 text-gray-800"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                                    />
+                                </svg>
+                                <a :href="'mailto:'+json.basics.email"> {{json.basics.email}}</a>
+                            </li>
+
+                            <li class="flex gap-4 items-center">
+                                <svg
+                                    class="size-6 text-gray-800"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
                                     <path
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
@@ -35,18 +60,16 @@
 
                                 <a :href="'tel:'+json.basics.phone"> {{json.basics.phone}}</a>
                             </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
-                                    />
-                                </svg>
-                                <a :href="'mailto:'+json.basics.email"> {{json.basics.email}}</a>
-                            </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+
+                            <li class="flex gap-2 items-center">
+                                <svg
+                                    class="size-6 text-gray-800"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
                                     <path
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
@@ -56,8 +79,15 @@
                                 <span>{{json.basics.location.city}}, {{json.basics.location.address}}</span>
                             </li>
 
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <li class="flex gap-2 items-center">
+                                <svg
+                                    class="size-6 text-gray-800"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
                                     <path
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
@@ -69,63 +99,23 @@
                         </ul>
                     </section>
 
-                    <section>
-                        <h3>Skills</h3>
+                    <section class="p-8 border-b">
+                        <h3 class="uppercase text-xl mb-10">Skills</h3>
 
                         <ul>
-                            <li v-for="skill in json.skills">{{skill.name}}</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h3>Languages</h3>
-
-                        <ul>
-                            <li v-for="language in json.languages">{{language.language}}</li>
-                        </ul>
-                    </section>
-                </aside>
-                <article>
-                    <section>
-                        <h3>About</h3>
-                        <p>{{json.basics.summary}}</p>
-                    </section>
-
-                    <section>
-                        <h3>Experiences</h3>
-                        <div v-for="work in json.work">
-                            <div class="flex justify-between">
-                                <h4>{{work.position}}</h4>
-                                <p>{{new Date(work.startDate).getFullYear()}}-{{new Date(work.endDate).getFullYear()}}</p>
-                            </div>
-                            <p>{{work.name}} - {{work.location}}</p>
-                            <ul>
-                                <li v-for="highlight in work.highlights" v-html="highlight"></li>
-                            </ul>
-                            <p>{{work.summary}}</p>
-                            <div><span class="badge" v-for="skill in work.skills">{{skill}}</span></div>
-                        </div>
-                    </section>
-
-                    <section>
-                        <h3>Projects</h3>
-                        <ul>
-                            <li v-for="project in json.projects">
-                                <div>
-                                    <strong>{{project.name}}</strong>
-                                </div>
-                                <ul>
-                                    <li>
-                                        <a :href="project.url" target="_blank">{{project.url}}</a>
+                            <li v-for="skill in json.skills">
+                                <h6 class="">{{skill.name}}</h6>
+                                <ul class="flex gap-2">
+                                    <li class="bg-gray-50 px-2 py-1 rounded-lg text-gray-600 text-xs" v-for="keyword in skill.keywords">
+                                        {{keyword}}
                                     </li>
                                 </ul>
-                                <p>{{project.summary}}</p>
                             </li>
                         </ul>
                     </section>
 
-                    <section>
-                        <h3>Education</h3>
+                    <section class="p-8 border-b">
+                        <h3 class="uppercase text-xl mb-10">Education</h3>
                         <ul>
                             <li v-for="education in json.education">
                                 <p>
@@ -136,6 +126,58 @@
                             </li>
                         </ul>
                     </section>
+
+                    <section class="p-8 border-b">
+                        <h3 class="uppercase text-xl mb-10">Languages</h3>
+
+                        <ul>
+                            <li v-for="language in json.languages">{{language.language}}</li>
+                        </ul>
+                    </section>
+                </aside>
+
+                <article>
+                    <section class="p-8 border-b">
+                        <h3 class="uppercase text-xl mb-10">About</h3>
+                        <p class="text-sm">{{json.basics.summary}}</p>
+                    </section>
+
+                    <section class="p-8 border-b">
+                        <h3 class="uppercase text-xl mb-10">Work experience</h3>
+                        <div class="space-y-10">
+                            <div v-for="work in json.work">
+                                <h4 class="font-bold capitalize text-lg mb-8">{{work.position}}</h4>
+                                <div class="flex justify-between">
+                                    <h5 class="text-sm">{{work.name}}</h5>
+                                    <span class="text-sm">{{new Date(work.startDate).getFullYear()}}-{{new Date(work.endDate).getFullYear()}}</span>
+                                </div>
+
+                                <p>{{work.summary}}</p>
+
+                                <ul class="text-sm">
+                                    <li v-for="highlight in work.highlights" class="list-disc" v-html="highlight"></li>
+                                </ul>
+                                <div><span class="badge" v-for="skill in work.skills">{{skill}}</span></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- <section class="p-8 border-b">
+                        <h3 class="uppercase text-xl mb-10">Projects</h3>
+                        <ul>
+                            <li v-for="project in json.projects">
+                                <div>
+                                    <strong>{{project.name}}</strong>
+                                </div>
+                                <ul>
+                                    <li class="flex gap-2 items-center">
+                                        <a :href="project.url" target="_blank">{{project.url}}</a>
+                                    </li>
+                                </ul>
+                                <p>{{project.summary}}</p>
+                            </li>
+                        </ul>
+                    </section> -->
                 </article>
             </main>
         </div>
