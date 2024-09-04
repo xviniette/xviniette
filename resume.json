@@ -1,7 +1,7 @@
 {
     "basics": {
         "name": "Vincent Bazia",
-        "label": "Full Stack Developer",
+        "label": "Senior Full Stack Developer",
         "image": "./me.png",
         "email": "vincent.bazia@gmail.com",
         "phone": "+33625953110",
@@ -32,13 +32,13 @@
     },
     "work": [
         {
-            "name": "",
-            "position": "Lead FullStack Developer",
+            "name": "smooth.video",
+            "position": "Founder of smooth.video",
             "startDate": "2023-09-01",
             "highlights": ["Developed smooth.video", "Created multiple saas products"],
             "url": "https://smooth.video",
             "location": "Montpellier,  France",
-            "skills": ["Next.js"]
+            "skills": ["Next.js", "Tailwind", "Stripe", "WebCodecs API"]
         },
         {
             "name": "ELIA GAMES",
@@ -117,11 +117,11 @@
     "skills": [
         {
             "name": "Frontend",
-            "keywords": ["JavaScript", "React", "Next.js", "Vue.js", "Tailwind", "HTML", "CSS", "WebGL"]
+            "keywords": ["Javascript", "React", "NextJS", "VueJS", "Tailwind", "WebGL", "HTML", "CSS"]
         },
         {
             "name": "Backend",
-            "keywords": ["Node.js", "PHP"]
+            "keywords": ["Node.js", "PHP", "GO", "AdonisJS", "NestJS", "Laravel"]
         },
         {
             "name": "DB",
