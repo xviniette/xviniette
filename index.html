@@ -69,9 +69,9 @@
                         <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-4">Education</h3>
                         <div class="space-y-4">
                             <div v-for="education in json.education">
-                                <div class="flex justify-between">
+                                <div class="flex justify-between items-center">
                                     <h4 class="font-bold uppercase text-gray-800">{{education.studyType}}</h4>
-                                    <span class="text-gray-600">{{new Date(education.endDate).getFullYear()}}</span>
+                                    <span class="text-gray-600 text-sm">{{formatDate(education.endDate)}}</span>
                                 </div>
                                 <p class="text-xs text-gray-600">{{education.institution}}</p>
                             </div>

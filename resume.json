@@ -149,28 +149,5 @@
             "fluency": "Advanced",
             "language": "Catalan"
         }
-    ],
-    "projects": [
-        {
-            "name": "smooth.video",
-            "startDate": "2022-12-31",
-            "summary": "Create beautiful screen recording",
-            "url": "https://smooth.video",
-            "endDate": "2022-12-31"
-        },
-        {
-            "name": "Flappy Learning",
-            "startDate": "2016-07-31",
-            "summary": "Program learning to play Flappy Bird by machine learning",
-            "url": "https://xviniette.github.io/FlappyLearning/",
-            "endDate": "2016-07-31"
-        },
-        {
-            "name": "Game Jams",
-            "startDate": "2017-12-31",
-            "summary": null,
-            "url": "https://github.com/xviniette/GameJams",
-            "endDate": "2018-12-31"
-        }
     ]
 }
