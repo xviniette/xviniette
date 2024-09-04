@@ -18,10 +18,10 @@
         <div v-if="json" class="max-w-[827px] p-4 my-0 mx-auto">
             <header class="flex justify-between items-center border-b p-6">
                 <div>
-                    <h1 class="text-4xl">{{json.basics.label}}</h1>
-                    <h2 class="text-5xl font-serif font-bold uppercase font-light">{{json.basics.name}}</h2>
+                    <h2 class="text-5xl font-mono uppercase">{{json.basics.name}}</h2>
+                    <h1 class="text-4xl font-light">{{json.basics.label}}</h1>
                 </div>
-                <div class="bg-gray-100 rounded-full size-32 overflow-hidden">
+                <div class="bg-gray-100 rounded-full size-28 overflow-hidden">
                     <img class="w-full scale-[1.5] translate-y-4" :src="json.basics.image" />
                 </div>
             </header>
@@ -102,8 +102,11 @@
                                 <div class="flex justify-between items-center">
                                     <h4 class="font-bold text-lg">{{work.position}}</h4>
                                     <div class="text-sm font-bold">
-                                        <span>{{ formatDate(work.startDate)}}</span>-<span v-if="work.endDate">{{ formatDate(work.endDate)}}</span>
-                                        <span v-else>now</span>
+                                        <span>{{ formatDate(work.startDate)}}</span>
+                                        <span v-if="formatDate(work.startDate) != formatDate(work.endDate)"
+                                            >- <span v-if="work.endDate">{{ formatDate(work.endDate)}}</span>
+                                            <span v-else>now</span>
+                                        </span>
                                     </div>
                                 </div>
                                 <a :href="work.url" target="_blank" class="text-sm">{{work.name}}</a>
