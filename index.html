@@ -19,7 +19,7 @@
             <header class="flex justify-between items-center border-b p-6">
                 <div>
                     <h1 class="text-4xl">{{json.basics.label}}</h1>
-                    <h2 class="text-5xl uppercase font-light">{{json.basics.name}}</h2>
+                    <h2 class="text-5xl font-serif font-bold uppercase font-light">{{json.basics.name}}</h2>
                 </div>
                 <div class="bg-gray-100 rounded-full size-32 overflow-hidden">
                     <img class="w-full scale-[1.5] translate-y-4" :src="json.basics.image" />
@@ -29,9 +29,9 @@
             <main class="grid grid-cols-10">
                 <aside class="border-r col-span-4">
                     <section class="p-6 border-b">
-                        <h3 class="font-light uppercase text-lg tracking-widest text-gray-800 mb-4">Contact</h3>
+                        <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-4">Contact</h3>
 
-                        <ul class="space-y-1">
+                        <ul class="space-y-1 text-sm text-gray-800">
                             <li class="flex gap-2 items-center">
                                 <a :href="'mailto:'+json.basics.email">{{json.basics.email}}</a>
                             </li>
@@ -43,11 +43,15 @@
                             <li class="flex gap-2 items-center">
                                 <span>{{json.basics.location.city}}, {{json.basics.location.address}}</span>
                             </li>
+
+                            <li class="flex gap-2 items-center">
+                                <a :href="json.basics.url">{{json.basics.url}}</a>
+                            </li>
                         </ul>
                     </section>
 
                     <section class="p-6 border-b">
-                        <h3 class="font-light uppercase text-lg tracking-widest text-gray-800 mb-4">Skills</h3>
+                        <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-4">Skills</h3>
 
                         <ul class="space-y-4">
                             <li v-for="skill in json.skills">
@@ -62,7 +66,7 @@
                     </section>
 
                     <section class="p-6 border-b">
-                        <h3 class="font-light uppercase text-lg tracking-widest text-gray-800 mb-4">Education</h3>
+                        <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-4">Education</h3>
                         <div class="space-y-4">
                             <div v-for="education in json.education">
                                 <div class="flex justify-between">
@@ -75,7 +79,7 @@
                     </section>
 
                     <section class="p-6">
-                        <h3 class="font-light uppercase text-lg tracking-widest text-gray-800 mb-4">Languages</h3>
+                        <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-4">Languages</h3>
 
                         <ul class="text-gray-800 text-sm">
                             <li v-for="language in json.languages">
@@ -87,12 +91,12 @@
 
                 <article class="col-span-6">
                     <section class="p-6 border-b">
-                        <h3 class="font-light uppercase text-lg tracking-widest text-gray-800 mb-4">Profile</h3>
+                        <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-4">Profile</h3>
                         <p class="text-sm italic">{{json.basics.summary}}</p>
                     </section>
 
                     <section class="p-6">
-                        <h3 class="font-light uppercase text-lg tracking-widest text-gray-800 mb-2">experience</h3>
+                        <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-2">experience</h3>
                         <div class="space-y-8">
                             <div v-for="work in json.work">
                                 <div class="flex justify-between items-center">
