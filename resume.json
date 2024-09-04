@@ -2,11 +2,11 @@
     "basics": {
         "name": "Vincent Bazia",
         "label": "Full Stack Developer",
-        "image": "https://www.bazia.dev/vincentbazia.jpeg",
+        "image": "./me.png",
         "email": "vincent.bazia@gmail.com",
-        "phone": "06 25 95 31 10",
+        "phone": "+33625953110",
         "url": "https://www.linkedin.com/in/vincentbazia",
-        "summary": "Passionate developer, working on web apps",
+        "summary": "I am a Senior fullstack developer, with 8+ years of experience",
         "location": {
             "city": "Montpellier",
             "countryCode": "FR",
@@ -97,18 +97,14 @@
             "area": "Informatique",
             "studyType": "Master 2",
             "startDate": "2014-12-31",
-            "endDate": "2016-12-31",
-            "score": "",
-            "courses": []
+            "endDate": "2016-12-31"
         },
         {
             "institution": "IUT de Montpellier-Sète",
             "area": "Informatique",
             "studyType": "DUT",
             "startDate": "2011-12-31",
-            "endDate": "2013-12-31",
-            "score": "",
-            "courses": []
+            "endDate": "2013-12-31"
         }
     ],
     "skills": [
