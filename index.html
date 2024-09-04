@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Vincent Bazia Resume</title>
+    </head>
+
+    <body v-scope @vue:mounted="getJSON">
+        <div v-if="json">
+            <header>
+                <div>
+                    <h2>{{json.basics.label}}</h2>
+                    <h1>{{json.basics.name}}</h1>
+                </div>
+
+                <img :src="json.basics.image" />
+            </header>
+
+            <main>
+                <aside>
+                    <section>
+                        <h3>Contact</h3>
+
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                                    />
+                                </svg>
+
+                                <a :href="'tel:'+json.basics.phone"> {{json.basics.phone}}</a>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                                    />
+                                </svg>
+                                <a :href="'mailto:'+json.basics.email"> {{json.basics.email}}</a>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                                    />
+                                </svg>
+                                <span>{{json.basics.location.city}}, {{json.basics.location.address}}</span>
+                            </li>
+
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                                    />
+                                </svg>
+                                <a :href="json.basics.url" target="_blank"> {{json.basics.url}}</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>Skills</h3>
+
+                        <ul>
+                            <li v-for="skill in json.skills">{{skill.name}}</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>Languages</h3>
+
+                        <ul>
+                            <li v-for="language in json.languages">{{language.language}}</li>
+                        </ul>
+                    </section>
+                </aside>
+                <article>
+                    <section>
+                        <h3>About</h3>
+                        <p>{{json.basics.summary}}</p>
+                    </section>
+
+                    <section>
+                        <h3>Experiences</h3>
+                        <div v-for="work in json.work">
+                            <div class="flex justify-between">
+                                <h4>{{work.position}}</h4>
+                                <p>{{new Date(work.startDate).getFullYear()}}-{{new Date(work.endDate).getFullYear()}}</p>
+                            </div>
+                            <p>{{work.name}} - {{work.location}}</p>
+                            <ul>
+                                <li v-for="highlight in work.highlights" v-html="highlight"></li>
+                            </ul>
+                            <p>{{work.summary}}</p>
+                            <div><span class="badge" v-for="skill in work.skills">{{skill}}</span></div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>Projects</h3>
+                        <ul>
+                            <li v-for="project in json.projects">
+                                <div>
+                                    <strong>{{project.name}}</strong>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a :href="project.url" target="_blank">{{project.url}}</a>
+                                    </li>
+                                </ul>
+                                <p>{{project.summary}}</p>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>Education</h3>
+                        <ul>
+                            <li v-for="education in json.education">
+                                <p>
+                                    <strong>{{education.institution}}</strong>{{new Date(education.startDate).getFullYear()}}-{{new
+                                    Date(education.endDate).getFullYear()}}
+                                </p>
+                                <p>{{education.area}}<small>{{education.studyType}}</small></p>
+                            </li>
+                        </ul>
+                    </section>
+                </article>
+            </main>
+        </div>
+
+        <script type="module">
+            import { createApp } from "https://unpkg.com/petite-vue?module"
+
+            createApp({
+                json: null,
+                getJSON() {
+                    fetch("./resume.json")
+                        .then(res => res.json())
+                        .then(res => (this.json = res))
+                },
+            }).mount()
+        </script>
+    </body>
+</html>

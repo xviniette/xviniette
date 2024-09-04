@@ -1,0 +1,173 @@
+{
+    "basics": {
+        "name": "Vincent Bazia",
+        "label": "Full Stack Developer",
+        "image": "https://www.bazia.dev/vincentbazia.jpeg",
+        "email": "vincent.bazia@gmail.com",
+        "phone": "06 25 95 31 10",
+        "url": "https://www.linkedin.com/in/vincentbazia",
+        "summary": "Passionate developer, working on web apps",
+        "location": {
+            "city": "Montpellier",
+            "countryCode": "FR",
+            "address": "France"
+        },
+        "profiles": [
+            {
+                "network": "linkedin",
+                "username": "vincentbazia",
+                "url": "https://www.linkedin.com/in/vincentbazia/"
+            },
+            {
+                "network": "Twitter",
+                "username": "xviniette",
+                "url": "https://twitter.com/xviniette"
+            },
+            {
+                "network": "GitHub",
+                "username": "xviniette",
+                "url": "https://github.com/xviniette"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "BAZIA",
+            "position": "Lead FullStack Developer",
+            "startDate": "2022-02-28",
+            "endDate": "2023-05-31",
+            "highlights": ["Developed <a href=\"https://smooth.video\">smooth.video</a>", "Created multiple saas products"],
+            "url": "https://smooth.video",
+            "location": "Montpellier,  France",
+            "skills": [""]
+        },
+        {
+            "name": "ELIA GAMES",
+            "position": "Lead FullStack Developer",
+            "startDate": "2022-02-28",
+            "endDate": "2023-05-31",
+            "highlights": ["Generate thousand of video ads", "Create a platform between ads persons and creative"],
+            "url": "https://www.elia.games/",
+            "location": "Montpellier,  France",
+            "skills": ["Next.js", "GCP", "ffmpeg"]
+        },
+        {
+            "name": "Digit RE group",
+            "position": "FullStack Developer",
+            "startDate": "2020-10-31",
+            "endDate": "2022-02-28",
+            "highlights": ["Refactoring "],
+            "url": "https://www.linkedin.com/company/digit-re-group/",
+            "location": "Montpellier,  France",
+            "skills": ["Node.js", "React", "Javascript", "AWS", "SQL"]
+        },
+        {
+            "name": "Qyrolab",
+            "position": "Co-Founder & FullStack Developer",
+            "startDate": "2018-10-31",
+            "endDate": "2020-07-31",
+            "highlights": [],
+            "url": "",
+            "location": "Montpellier,  France",
+            "skills": ["Node.js", "Vue.js", "Javascript", "AWS", "SQL"]
+        },
+        {
+            "name": "SATT AxLR / WeAreLearning",
+            "position": "Lead FullStack Engineer",
+            "startDate": "2016-10-31",
+            "endDate": "2018-10-31",
+            "highlights": [],
+            "url": "https://www.linkedin.com/company/satt-axlr/",
+            "location": "Montpellier, France",
+            "skills": ["Node.js", "Vue.js", "Javascript", "AWS", "SQL"]
+        },
+        {
+            "name": "UBISOFT",
+            "position": "Back End Engineer",
+            "startDate": "2016-02-28",
+            "endDate": "2016-07-31",
+            "highlights": [],
+            "url": "https://www.ubisoft.com/en-us/studio/montpellier",
+            "location": "Montpellier, France",
+            "skills": ["Machine Learning", "Node.js", "Angular"]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Université de Montpellier",
+            "area": "Informatique",
+            "studyType": "Master 2",
+            "startDate": "2014-12-31",
+            "endDate": "2016-12-31",
+            "score": "",
+            "courses": []
+        },
+        {
+            "institution": "IUT de Montpellier-Sète",
+            "area": "Informatique",
+            "studyType": "DUT",
+            "startDate": "2011-12-31",
+            "endDate": "2013-12-31",
+            "score": "",
+            "courses": []
+        }
+    ],
+    "skills": [
+        {
+            "name": "Frontend",
+            "level": "Master",
+            "keywords": ["HTML", "CSS", "JavaScript", "React", "Next"]
+        },
+        {
+            "name": "Backend",
+            "level": "Master",
+            "keywords": ["Node.js", "PHP", "SQL", "Laravel"]
+        },
+        {
+            "name": "Admin",
+            "level": "Master",
+            "keywords": ["AWS", "GCP"]
+        }
+    ],
+    "languages": [
+        {
+            "fluency": "Advanced",
+            "language": "English"
+        },
+        {
+            "fluency": "Native",
+            "language": "French"
+        },
+        {
+            "fluency": "Advanced",
+            "language": "Catala"
+        },
+        {
+            "fluency": "Elementary",
+            "language": "Spanish"
+        }
+    ],
+    "projects": [
+        {
+            "name": "smooth.video",
+            "startDate": "2022-12-31",
+            "summary": "Create beautiful screen recording",
+            "url": "https://smooth.video",
+            "endDate": "2022-12-31"
+        },
+        {
+            "name": "Flappy Learning",
+            "startDate": "2016-07-31",
+            "summary": "Program learning to play Flappy Bird by machine learning",
+            "url": "https://xviniette.github.io/FlappyLearning/",
+            "endDate": "2016-07-31"
+        },
+        {
+            "name": "Game Jams",
+            "startDate": "2017-12-31",
+            "summary": null,
+            "url": "https://github.com/xviniette/GameJams",
+            "endDate": "2018-12-31"
+        }
+    ]
+}
