@@ -16,7 +16,7 @@
 
     <body v-scope @vue:mounted="getJSON">
         <div v-if="json" class="max-w-[827px] p-4 my-0 mx-auto">
-            <header class="flex justify-between items-center border-b p-6">
+            <header class="flex justify-between items-center border-b p-4">
                 <div>
                     <h2 class="text-5xl font-mono uppercase">{{json.basics.name}}</h2>
                     <h1 class="text-4xl font-light">{{json.basics.label}}</h1>
@@ -28,7 +28,7 @@
 
             <main class="grid grid-cols-10">
                 <aside class="border-r col-span-4">
-                    <section class="p-6 border-b">
+                    <section class="p-4 border-b">
                         <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-4">Contact</h3>
 
                         <ul class="space-y-1 text-sm text-gray-800">
@@ -50,13 +50,13 @@
                         </ul>
                     </section>
 
-                    <section class="p-6 border-b">
+                    <section class="p-4 border-b">
                         <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-4">Skills</h3>
 
                         <ul class="space-y-4">
                             <li v-for="skill in json.skills">
-                                <h6 class="">{{skill.name}}</h6>
-                                <ul class="flex flex-wrap gap-2">
+                                <h6 class="text-gray-800 text-sm">{{skill.name}}</h6>
+                                <ul class="flex flex-wrap gap-2 ml-4">
                                     <li class="bg-gray-50 px-2 py-1 rounded-lg text-gray-600 text-xs" v-for="keyword in skill.keywords">
                                         {{keyword}}
                                     </li>
@@ -65,7 +65,7 @@
                         </ul>
                     </section>
 
-                    <section class="p-6 border-b">
+                    <section class="p-4 border-b">
                         <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-4">Education</h3>
                         <div class="space-y-4">
                             <div v-for="education in json.education">
@@ -78,7 +78,7 @@
                         </div>
                     </section>
 
-                    <section class="p-6">
+                    <section class="p-4">
                         <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-4">Languages</h3>
 
                         <ul class="text-gray-800 text-sm">
@@ -90,12 +90,12 @@
                 </aside>
 
                 <article class="col-span-6">
-                    <section class="p-6 border-b">
+                    <section class="p-4 border-b">
                         <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-4">Profile</h3>
                         <p class="text-sm italic">{{json.basics.summary}}</p>
                     </section>
 
-                    <section class="p-6">
+                    <section class="p-4">
                         <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-2">experience</h3>
                         <div class="space-y-8">
                             <div v-for="work in json.work">
