@@ -37,8 +37,7 @@
             "startDate": "2023-09-01",
             "highlights": ["Developed smooth.video", "Created multiple saas products"],
             "url": "https://smooth.video",
-            "location": "Montpellier,  France",
-            "skills": ["Next.js", "Tailwind", "Stripe", "WebCodecs API"]
+            "location": "Montpellier,  France"
         },
         {
             "name": "ELIA GAMES",
@@ -51,38 +50,34 @@
                 "Create a platform between ads persons and creative"
             ],
             "url": "https://www.elia.games/",
-            "location": "Montpellier,  France",
-            "skills": ["Next.js", "GCP", "ffmpeg"]
+            "location": "Montpellier,  France"
         },
         {
             "name": "Digit RE group",
             "position": "FullStack Developer",
             "startDate": "2020-10-31",
             "endDate": "2022-02-28",
-            "highlights": ["Refactoring "],
+            "highlights": ["Refactoring a 15+ years old service"],
             "url": "https://www.linkedin.com/company/digit-re-group/",
-            "location": "Montpellier,  France",
-            "skills": ["Node.js", "React", "Javascript", "AWS", "SQL"]
+            "location": "Montpellier,  France"
         },
         {
             "name": "Qyrolab",
             "position": "Co-Founder & FullStack Developer",
             "startDate": "2018-10-31",
             "endDate": "2020-07-31",
-            "highlights": [],
+            "highlights": ["Created a Mobile Game Editor", "Developed a social network : Instagram of games", "More than 2000 games created"],
             "url": "",
-            "location": "Montpellier,  France",
-            "skills": ["Node.js", "Vue.js", "Javascript", "AWS", "SQL"]
+            "location": "Montpellier,  France"
         },
         {
             "name": "SATT AxLR",
             "position": "Lead FullStack Engineer",
             "startDate": "2016-10-31",
             "endDate": "2018-10-31",
-            "highlights": [],
+            "highlights": ["Created a Serious Game Editor in the browser", "Developed a learning platform around Serious Games"],
             "url": "https://www.linkedin.com/company/satt-axlr/",
-            "location": "Montpellier, France",
-            "skills": ["Node.js", "Vue.js", "Javascript", "AWS", "SQL"]
+            "location": "Montpellier, France"
         },
         {
             "name": "UBISOFT Montpellier",
@@ -90,12 +85,11 @@
             "startDate": "2016-02-28",
             "endDate": "2016-07-31",
             "highlights": [
-                "I've developed a player analysis tool to determine their likelihood of purchase",
-                "I developed the backend for the rayman adventure game"
+                "Created a machine learning model to determine players probability of purchase",
+                "Dveloped \"Rayman Adventures\" game backend"
             ],
             "url": "https://www.ubisoft.com/en-us/studio/montpellier",
-            "location": "Montpellier, France",
-            "skills": ["Machine Learning", "Tensorflow", "Node.js", "Angular"]
+            "location": "Montpellier, France"
         }
     ],
     "education": [
