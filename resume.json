@@ -34,7 +34,7 @@
         {
             "name": "",
             "position": "Lead FullStack Developer",
-            "startDate": "2022-02-28",
+            "startDate": "2023-09-01",
             "highlights": ["Developed smooth.video", "Created multiple saas products"],
             "url": "https://smooth.video",
             "location": "Montpellier,  France",
@@ -45,7 +45,11 @@
             "position": "Lead FullStack Developer",
             "startDate": "2022-02-28",
             "endDate": "2023-05-31",
-            "highlights": ["", "Generate thousand of video ads", "Create a platform between ads persons and creative"],
+            "highlights": [
+                "Created a platform for ads automation",
+                "Generate thousand of video ads",
+                "Create a platform between ads persons and creative"
+            ],
             "url": "https://www.elia.games/",
             "location": "Montpellier,  France",
             "skills": ["Next.js", "GCP", "ffmpeg"]
@@ -71,7 +75,7 @@
             "skills": ["Node.js", "Vue.js", "Javascript", "AWS", "SQL"]
         },
         {
-            "name": "SATT AxLR / WeAreLearning",
+            "name": "SATT AxLR",
             "position": "Lead FullStack Engineer",
             "startDate": "2016-10-31",
             "endDate": "2018-10-31",
@@ -81,14 +85,17 @@
             "skills": ["Node.js", "Vue.js", "Javascript", "AWS", "SQL"]
         },
         {
-            "name": "UBISOFT",
-            "position": "Back End Engineer",
+            "name": "UBISOFT Montpellier",
+            "position": "BackEnd Engineer",
             "startDate": "2016-02-28",
             "endDate": "2016-07-31",
-            "highlights": [],
+            "highlights": [
+                "I've developed a player analysis tool to determine their likelihood of purchase",
+                "I developed the backend for the rayman adventure game"
+            ],
             "url": "https://www.ubisoft.com/en-us/studio/montpellier",
             "location": "Montpellier, France",
-            "skills": ["Machine Learning", "Node.js", "Angular"]
+            "skills": ["Machine Learning", "Tensorflow", "Node.js", "Angular"]
         }
     ],
     "education": [
@@ -110,36 +117,37 @@
     "skills": [
         {
             "name": "Frontend",
-            "level": "Master",
-            "keywords": ["HTML", "CSS", "JavaScript", "React", "Next"]
+            "keywords": ["JavaScript", "React", "Next.js", "Vue.js", "Tailwind", "HTML", "CSS", "WebGL"]
         },
         {
             "name": "Backend",
-            "level": "Master",
-            "keywords": ["Node.js", "PHP", "SQL", "Laravel"]
+            "keywords": ["Node.js", "PHP"]
         },
         {
-            "name": "Admin",
-            "level": "Master",
-            "keywords": ["AWS", "GCP"]
+            "name": "DB",
+            "keywords": ["PostgreSQL", "MySQL", "SQLite", "MongoDB", "Redis"]
+        },
+        {
+            "name": "Other",
+            "keywords": ["AWS", "GCP", "Tensorflow", "ML", "Git"]
         }
     ],
     "languages": [
-        {
-            "fluency": "Advanced",
-            "language": "English"
-        },
         {
             "fluency": "Native",
             "language": "French"
         },
         {
             "fluency": "Advanced",
-            "language": "Catala"
+            "language": "English"
         },
         {
             "fluency": "Elementary",
             "language": "Spanish"
+        },
+        {
+            "fluency": "Advanced",
+            "language": "Catalan"
         }
     ],
     "projects": [

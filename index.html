@@ -16,16 +16,18 @@
 
     <body v-scope @vue:mounted="getJSON">
         <div v-if="json" class="max-w-[827px] p-4 my-0 mx-auto">
+            <header class="flex justify-between items-center border-b p-6">
+                <div>
+                    <h1 class="text-4xl">{{json.basics.label}}</h1>
+                    <h2 class="text-5xl uppercase font-light">{{json.basics.name}}</h2>
+                </div>
+                <div class="bg-gray-100 rounded-full size-32 overflow-hidden">
+                    <img class="w-full scale-[1.4] translate-y-4 saturate-50" :src="json.basics.image" />
+                </div>
+            </header>
+
             <main class="grid grid-cols-10">
                 <aside class="border-r col-span-4">
-                    <section class="p-6 border-b flex flex-col gap-4 items-center">
-                        <div class="bg-gray-100 rounded-full w-[70%] overflow-hidden">
-                            <img class="w-full scale-[1.4] translate-y-4 saturate-50" :src="json.basics.image" />
-                        </div>
-
-                        <h2 class="text-4xl uppercase font-light text-center">{{json.basics.name}}</h2>
-                    </section>
-
                     <section class="p-6 border-b">
                         <h3 class="font-bold uppercase text-xl tracking-widest text-gray-800 mb-4">Contact</h3>
 
@@ -50,7 +52,7 @@
                         <ul>
                             <li v-for="skill in json.skills">
                                 <h6 class="">{{skill.name}}</h6>
-                                <ul class="flex gap-2">
+                                <ul class="flex flex-wrap gap-2">
                                     <li class="bg-gray-50 px-2 py-1 rounded-lg text-gray-600 text-xs" v-for="keyword in skill.keywords">
                                         {{keyword}}
                                     </li>
@@ -65,7 +67,7 @@
                             <div v-for="education in json.education">
                                 <div class="flex justify-between">
                                     <h4 class="font-bold uppercase text-gray-800">{{education.studyType}}</h4>
-                                    <span class="text-gray-600">{{new Date(education.endDate).getFdivlYear()}}</span>
+                                    <span class="text-gray-600">{{new Date(education.endDate).getFullYear()}}</span>
                                 </div>
                                 <p class="text-xs text-gray-600">{{education.institution}}</p>
                             </div>
@@ -82,34 +84,33 @@
                 </aside>
 
                 <article class="col-span-6">
-                    <h1 class="text-4xl">{{json.basics.label}}</h1>
-
                     <section class="p-6 border-b">
                         <h3 class="font-bold uppercase text-xl tracking-widest text-gray-800 mb-4">Profile</h3>
                         <p class="text-sm italic">{{json.basics.summary}}</p>
                     </section>
 
-                    <section class="p-6 border-b">
+                    <section class="p-6">
                         <h3 class="font-bold uppercase text-xl tracking-widest text-gray-800 mb-4">experience</h3>
                         <div class="space-y-10">
                             <div v-for="work in json.work">
                                 <div class="flex justify-between items-center">
                                     <h4 class="font-bold capitalize text-lg">{{work.position}}</h4>
-                                    <span class="text-sm font-bold"
-                                        >{{new Date(work.startDate).getFullYear()}}-{{new Date(work.endDate).getFullYear()}}</span
-                                    >
+                                    <div class="text-sm font-bold">
+                                        <span>{{ formatDate(work.startDate)}}</span>-<span v-if="work.endDate">{{ formatDate(work.endDate)}}</span>
+                                        <span v-else>now</span>
+                                    </div>
                                 </div>
                                 <a :href="work.url" target="_blank" class="text-sm">{{work.name}}</a>
 
                                 <p>{{work.summary}}</p>
 
-                                <ul class="text-sm">
-                                    <li v-for="highlight in work.highlights" class="list-disc" v-html="highlight"></li>
+                                <ul class="text-sm text-gray-500 font-light list-disc ml-8">
+                                    <li v-for="highlight in work.highlights" v-html="highlight"></li>
                                 </ul>
 
-                                <ul class="flex mt-4">
+                                <!-- <ul class="flex mt-4">
                                     <li class="bg-gray-50 px-2 py-1 rounded-lg text-gray-600 text-xs" v-for="skill in work.skills">{{skill}}</li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </section>
@@ -126,6 +127,9 @@
                     fetch("./resume.json")
                         .then(res => res.json())
                         .then(res => (this.json = res))
+                },
+                formatDate(date) {
+                    return new Date(date).getFullYear()
                 },
             }).mount()
         </script>
