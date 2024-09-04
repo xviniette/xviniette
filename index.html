@@ -99,9 +99,9 @@
                         <h3 class="font-light uppercase text-lg tracking-widest text-gray-600 mb-2">experience</h3>
                         <div class="space-y-8">
                             <div v-for="work in json.work">
-                                <div class="flex justify-between items-center">
-                                    <h4 class="font-bold text-lg">{{work.position}}</h4>
-                                    <div class="text-sm font-bold">
+                                <div class="flex justify-between items-center text-gray-800">
+                                    <h4 class="font-bold text">{{work.position}}</h4>
+                                    <div class="text-sm text-gray-600">
                                         <span>{{ formatDate(work.startDate)}}</span>
                                         <span v-if="formatDate(work.startDate) != formatDate(work.endDate)"
                                             >- <span v-if="work.endDate">{{ formatDate(work.endDate)}}</span>
