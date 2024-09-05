@@ -39,7 +39,7 @@
             <p class="text text-gray-800">{{json.basics.summary}}</p>
 
             <section>
-                <h3 class="font-bold uppercase text-lg tracking-widest text-yellow-600 border-b">Skills</h3>
+                <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b">Skills</h3>
 
                 <ul class="space-y-1">
                     <li v-for="skill in json.skills">
@@ -54,7 +54,7 @@
             </section>
 
             <section>
-                <h3 class="font-bold uppercase text-lg tracking-widest text-yellow-600 border-b mb-2">experience</h3>
+                <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b mb-2">experience</h3>
                 <div class="space-y-2">
                     <div v-for="work in json.work">
                         <div class="grid grid-cols-3 justify-between items-center text-gray-800">
@@ -85,7 +85,7 @@
 
             <div class="grid grid-cols-2 gap-2">
                 <section class="border-r p-4">
-                    <h3 class="font-bold uppercase text-lg tracking-widest text-yellow-600 border-b">Education</h3>
+                    <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b">Education</h3>
                     <div class="">
                         <div v-for="education in json.education">
                             <div class="flex justify-between items-center">
@@ -98,7 +98,7 @@
                 </section>
 
                 <section class="p-4">
-                    <h3 class="font-bold uppercase text-lg tracking-widest text-yellow-600 border-b">Languages</h3>
+                    <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b">Languages</h3>
 
                     <ul class="text-gray-800 text-sm">
                         <li v-for="language in json.languages">{{language.language}} <span class="text-gray-500">- {{language.fluency}}</span></li>
