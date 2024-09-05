@@ -335,6 +335,7 @@
     </style>
 </head>
 <body  v-scope @vue:mounted="getJSON">
+  
     <div class="sc-bmzXxz bcSpmG">
         <div class="sc-cwHqhk iflvBO">
             <div class="sc-jEABJj jKKkni">
@@ -382,8 +383,8 @@
                             <div class="sc-fPXMhL frhuDL">{{work.position}}</div>
                             <div class="secondary">
                                 <div class="sc-eDPFhE eFZKil">
-                                    <div class="sc-dLNtp jGkksg">{{work.startDate}}</div>
-                                    — <div class="sc-dLNtp jGkksg">{{work.endDate}}</div>
+                                    <div class="sc-dLNtp jGkksg">{{formatDate(work.startDate)}}</div>
+                                    — <div class="sc-dLNtp jGkksg">{{formatDate(work.endDate)}}</div>
                                 </div>
                             </div>
                         </div>
@@ -406,7 +407,6 @@
                 <div class="sc-jEABJj jKKkni">
                     <div v-for="skill in json.skills" class="sc-jsJARu cMhEUI">
                         <div class="sc-hmdnzv gmSvHq">{{skill.name}}
-                        <!-- -->
                         :</div>
                         <div class="sc-bXCLgj hGISwA">
                             <div class="secondary">{{skill.keywords.join(" / ")}}</div>
@@ -426,8 +426,7 @@
                             <div class="sc-fPXMhL frhuDL">{{education.institution}}</div>
                             <div class="secondary">
                                 <div class="sc-eDPFhE eFZKil">
-                                    <div class="sc-dLNtp jGkksg">{{education.startDate}}</div>
-                                    — <div class="sc-dLNtp jGkksg">{{education.endDate}}</div>
+                              <div class="sc-dLNtp jGkksg">{{formatDate(education.endDate)}}</div>
                                 </div>
                             </div>
                         </div>
@@ -437,10 +436,7 @@
                   
                 </div>
             </div>
-        </div>
-
-  
-    
+        </div>  
    
         <div>
             <div class="sc-cwHqhk iflvBO">
@@ -470,6 +466,10 @@
                     .then(res => res.json())
                     .then(res => (this.json = res))
             },
+            formatDate(date) {
+                
+                    return new Date(date).getFullYear()
+                },
         }).mount()
     </script>
 </body>

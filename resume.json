@@ -115,7 +115,7 @@
         },
         {
             "name": "Backend",
-            "keywords": ["Node.js", "PHP", "GO", "AdonisJS", "NestJS", "Laravel"]
+            "keywords": ["Node.js", "PHP", "GO", "AdonisJS", "NestJS"]
         },
         {
             "name": "Databases",
