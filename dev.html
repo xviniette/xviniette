@@ -37,17 +37,14 @@
                 <h1 class="text-2xl font-thin uppercase text-gray-800">{{json.basics.label}}</h1>
             </div>
 
-            <p class="text-sm italic text-gray-800">{{json.basics.summary}}</p>
+            <!-- <p class="text-sm italic text-gray-800">{{json.basics.summary}}</p> -->
 
             <section>
                 <h3 class="font-bold uppercase text-lg tracking-widest text-yellow-600">Skills</h3>
-
-                <ul class="">
-                    <li v-for="skill in json.skills">
+                    <div v-for="skill in json.skills">
                         <span class="text-gray-700 font-light text-sm ufppercase">{{skill.name}} :</span>
                         <span class="bg-gray-100 px-2 py-1 rounded-lg text-gray-800 text-xs mr-1" v-for="keyword in skill.keywords">{{keyword}}</span>
                     </li>
-                </ul>
             </section>
 
             <section>

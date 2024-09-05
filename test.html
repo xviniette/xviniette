@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vincent Bazia</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style type="text/css">
+            @media print {
+                body {
+                    -webkit-print-color-adjust: exact;
+                }
+            }
+        </style>
+    </head>
+
+    <body v-scope @vue:mounted="getJSON">
+        <div v-if="json" class="max-w-[827px] mx-auto p-4 space-y-4">
+            <header class="flex gap-2 justify-between items-end pb-2 border-b">
+                <div class="bg-slate-200 aspect-square rounded-lg size-24 overflow-hidden">
+                    <img class="w-full scale-[1.5] translate-y-4" :src="json.basics.image" />
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold uppercase text-gray-800">{{json.basics.name}}</h2>
+                    <h1 class="text-lg font-thin uppercase text-gray-800">{{json.basics.label}}</h1>
+                </div>
+
+                <ul class="flex flex-col text-sm text-gray-800 font-light text-right">
+                    <a :href="'mailto:'+json.basics.email" class="hover:underline">{{json.basics.email}}</a>
+
+                    <a :href="'tel:'+json.basics.phone" class="hover:underline">{{json.basics.phone}}</a>
+
+                    <span>{{json.basics.location.city}}, {{json.basics.location.address}}</span>
+
+                    <a :href="json.basics.url" class="hover:underline">{{json.basics.url}}</a>
+                </ul>
+            </header>
+
+            <p class="text text-gray-800">{{json.basics.summary}}</p>
+
+            <section>
+                <h3 class="font-bold uppercase text-lg tracking-widest text-yellow-600 border-b">Skills</h3>
+
+                <ul class="space-y-1">
+                    <li v-for="skill in json.skills">
+                        <span class="text-gray-700 font-light text-sm uppercase">{{skill.name}} :</span>
+                        <!-- <ul class="flex flex-wrap gap-2 ml-4"> -->
+                        <span class="bg-gray-100 px-2 py-1 rounded-lg text-gray-800 text-xs mr-1" v-for="keyword in skill.keywords">
+                            {{keyword}}
+                        </span>
+                        <!-- </ul> -->
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3 class="font-bold uppercase text-lg tracking-widest text-yellow-600 border-b mb-2">experience</h3>
+                <div class="space-y-2">
+                    <div v-for="work in json.work">
+                        <div class="grid grid-cols-3 justify-between items-center text-gray-800">
+                            <h4 class="font-bold text upper">{{work.position}}</h4>
+                            <div>
+                                <a :href="work.url" target="_blank" class="text-sm text-gray-800 font-light hover:underline uppercase"
+                                    >{{work.name}}</a
+                                >
+                                <span class="text-xs font-thin text-gray-600">- {{work.location}}</span>
+                            </div>
+                            <div class="text-sm text-gray-600 text-right">
+                                <span>{{ formatDate(work.startDate)}}</span>
+                                <span v-if="formatDate(work.startDate) != formatDate(work.endDate)"
+                                    >- <span v-if="work.endDate">{{ formatDate(work.endDate)}}</span>
+                                    <span v-else>Present</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <p class="text-sm text-gray-600">{{work.summary}}</p>
+
+                        <ul class="text-sm text-gray-500 font-light list-disc ml-8">
+                            <li v-for="highlight in work.highlights" v-html="highlight"></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid grid-cols-2 gap-2">
+                <section class="border-r p-4">
+                    <h3 class="font-bold uppercase text-lg tracking-widest text-yellow-600 border-b">Education</h3>
+                    <div class="">
+                        <div v-for="education in json.education">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold uppercase text-gray-800">{{education.studyType}}</h4>
+                                <span class="text-gray-600 text-sm">{{formatDate(education.endDate)}}</span>
+                            </div>
+                            <p class="text-xs text-gray-600">{{education.institution}}</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="p-4">
+                    <h3 class="font-bold uppercase text-lg tracking-widest text-yellow-600 border-b">Languages</h3>
+
+                    <ul class="text-gray-800 text-sm">
+                        <li v-for="language in json.languages">{{language.language}} <span class="text-gray-500">- {{language.fluency}}</span></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <script type="module">
+            import { createApp } from "https://unpkg.com/petite-vue?module"
+
+            createApp({
+                json: null,
+                getJSON() {
+                    fetch("./resume.json")
+                        .then(res => res.json())
+                        .then(res => (this.json = res))
+                },
+                formatDate(date) {
+                    return new Date(date).getFullYear()
+                },
+            }).mount()
+        </script>
+    </body>
+</html>
