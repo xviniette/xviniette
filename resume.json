@@ -1,7 +1,7 @@
 {
     "basics": {
         "name": "Vincent Bazia",
-        "label": "Senior Full Stack Developer",
+        "label": "Senior FullStack Developer",
         "image": "./me.png",
         "email": "vincent.bazia@gmail.com",
         "phone": "+33625953110",
@@ -80,7 +80,7 @@
             "location": "Montpellier, France"
         },
         {
-            "name": "UBISOFT Montpellier",
+            "name": "UBISOFT",
             "position": "BackEnd Engineer",
             "startDate": "2016-02-28",
             "endDate": "2016-07-31",
@@ -118,12 +118,12 @@
             "keywords": ["Node.js", "PHP", "GO", "AdonisJS", "NestJS", "Laravel"]
         },
         {
-            "name": "DB",
+            "name": "Databases",
             "keywords": ["PostgreSQL", "MySQL", "SQLite", "MongoDB", "Redis"]
         },
         {
             "name": "Other",
-            "keywords": ["AWS", "GCP", "Tensorflow", "ML", "Shell", "Git"]
+            "keywords": ["AWS", "GCP", "Tensorflow", "ML", "Git", "Docker", "Shell"]
         }
     ],
     "languages": [
