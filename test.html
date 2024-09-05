@@ -16,8 +16,8 @@
 
     <body v-scope @vue:mounted="getJSON">
         <div v-if="json" class="max-w-[827px] mx-auto p-4 space-y-4">
-            <header class="flex gap-2 justify-between items-end pb-2 border-b">
-                <div class="bg-slate-200 aspect-square rounded-lg size-24 overflow-hidden">
+            <header class="flex gap-3 justify-between items-end pb-2 border-b-2 border-blue-100">
+                <div class="bg-blue-100 aspect-square rounded-xl size-24 overflow-hidden">
                     <img class="w-full scale-[1.5] translate-y-4" :src="json.basics.image" />
                 </div>
                 <div class="flex-1">
@@ -26,9 +26,9 @@
                 </div>
 
                 <ul class="flex flex-col text-sm text-gray-800 font-light text-right">
-                    <a :href="'mailto:'+json.basics.email" class="hover:underline">{{json.basics.email}}</a>
+                    <span>{{json.basics.email}}</span>
 
-                    <a :href="'tel:'+json.basics.phone" class="hover:underline">{{json.basics.phone}}</a>
+                    <span>{{json.basics.phone}}</span>
 
                     <span>{{json.basics.location.city}}, {{json.basics.location.address}}</span>
 
@@ -36,14 +36,14 @@
                 </ul>
             </header>
 
-            <p class="text text-gray-800">{{json.basics.summary}}</p>
+            <p class="text-gray-800">{{json.basics.summary}}</p>
 
             <section>
-                <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b">Skills</h3>
+                <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b-2 border-blue-100">Skills</h3>
 
                 <ul class="space-y-1">
                     <li v-for="skill in json.skills">
-                        <span class="text-gray-700 font-light text-sm uppercase">{{skill.name}} :</span>
+                        <span class="text-gray-700 font-bold text-sm">{{skill.name}} :</span>
                         <!-- <ul class="flex flex-wrap gap-2 ml-4"> -->
                         <span class="bg-gray-100 px-2 py-1 rounded-lg text-gray-800 text-xs mr-1" v-for="keyword in skill.keywords">
                             {{keyword}}
@@ -54,16 +54,13 @@
             </section>
 
             <section>
-                <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b mb-2">experience</h3>
-                <div class="space-y-2">
+                <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b-2 border-blue-100 mb-2">experience</h3>
+                <div class="space-y-4">
                     <div v-for="work in json.work">
-                        <div class="grid grid-cols-3 justify-between items-center text-gray-800">
-                            <h4 class="font-bold text upper">{{work.position}}</h4>
-                            <div>
-                                <a :href="work.url" target="_blank" class="text-sm text-gray-800 font-light hover:underline uppercase"
-                                    >{{work.name}}</a
-                                >
-                                <span class="text-xs font-thin text-gray-600">- {{work.location}}</span>
+                        <div class="flex justify-between items-center text-gray-800">
+                            <div class="text-sm">
+                                <span class="font-bold text-sm uppercase">{{work.position}}</span> -
+                                <a :href="work.url" target="_blank" class="font-light hover:underline">{{work.name}}</a>
                             </div>
                             <div class="text-sm text-gray-600 text-right">
                                 <span>{{ formatDate(work.startDate)}}</span>
@@ -84,8 +81,8 @@
             </section>
 
             <div class="grid grid-cols-2 gap-2">
-                <section class="border-r p-4">
-                    <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b">Education</h3>
+                <section class="p-4">
+                    <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b-2 border-blue-100">Education</h3>
                     <div class="">
                         <div v-for="education in json.education">
                             <div class="flex justify-between items-center">
@@ -98,7 +95,7 @@
                 </section>
 
                 <section class="p-4">
-                    <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b">Languages</h3>
+                    <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b-2 border-blue-100">Languages</h3>
 
                     <ul class="text-gray-800 text-sm">
                         <li v-for="language in json.languages">{{language.language}} <span class="text-gray-500">- {{language.fluency}}</span></li>
