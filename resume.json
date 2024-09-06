@@ -49,7 +49,7 @@
                 "Generate thousand of video ads",
                 "Create a platform between ads persons and creative"
             ],
-            "url": "https://www.linkedin.com/company/elia-games/",
+            "url": "https://www.elia.games/",
             "location": "Montpellier,  France"
         },
         {
@@ -59,7 +59,7 @@
             "endDate": "2022-02-28",
             "summary": "Refactoring a 15+ years old service",
             "highlights": ["Refactoring a 15+ years old service"],
-            "url": "https://www.linkedin.com/company/digit-re-group/",
+            "url": "https://www.digitregroup.com",
             "location": "Montpellier,  France"
         },
         {
@@ -73,11 +73,11 @@
         },
         {
             "name": "SATT AxLR",
-            "position": "Lead FullStack Engineer",
+            "position": "FullStack Engineer",
             "startDate": "2016-10-31",
             "endDate": "2018-10-31",
             "highlights": ["Created a Serious Game Editor in the browser", "Developed a learning platform around Serious Games"],
-            "url": "https://www.linkedin.com/company/satt-axlr/",
+            "url": "https://axlr.com/",
             "location": "Montpellier, France"
         },
         {

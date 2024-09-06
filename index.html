@@ -39,7 +39,7 @@
             <p class="text-gray-800">{{json.basics.summary}}</p>
 
             <section>
-                <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b-2 border-blue-100 mb-2">Skills</h3>
+                <h3 class="font-bold uppercase text-lg tracking-widest text-blue-500 border-b-2 border-blue-100 mb-2">Skills</h3>
 
                 <ul class="space-y-1">
                     <li v-for="skill in json.skills">
@@ -52,19 +52,19 @@
             </section>
 
             <section>
-                <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b-2 border-blue-100 mb-2">experience</h3>
+                <h3 class="font-bold uppercase text-lg tracking-widest text-blue-500 border-b-2 border-blue-100 mb-2">experience</h3>
                 <div class="space-y-4">
                     <div v-for="work in json.work">
                         <div class="flex justify-between items-center text-gray-800">
                             <div class="text-sm">
-                                <span class="font-bold text-sm uppercase">{{work.position}}</span> -
+                                <span class="font-bold text-sm uppercase tracking-wide">{{work.position}}</span> -
                                 <a :href="work.url" target="_blank" class="font-light hover:underline">{{work.name}}</a>
                             </div>
                             <div class="text-sm text-gray-600 text-right">
                                 <span>{{ formatDate(work.startDate)}}</span>
                                 <span v-if="formatDate(work.startDate) != formatDate(work.endDate)"
                                     >- <span v-if="work.endDate">{{ formatDate(work.endDate)}}</span>
-                                    <span v-else>Present</span>
+                                    <span v-else>now</span>
                                 </span>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
 
             <div class="grid grid-cols-2 gap-2">
                 <section class="p-4">
-                    <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b-2 border-blue-100">Education</h3>
+                    <h3 class="font-bold uppercase text-lg tracking-widest text-blue-500 border-b-2 border-blue-100">Education</h3>
                     <div class="">
                         <div v-for="education in json.education">
                             <div class="flex justify-between items-center">
@@ -93,7 +93,7 @@
                 </section>
 
                 <section class="p-4">
-                    <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 border-b-2 border-blue-100">Languages</h3>
+                    <h3 class="font-bold uppercase text-lg tracking-widest text-blue-500 border-b-2 border-blue-100">Languages</h3>
 
                     <ul class="text-gray-800 text-sm">
                         <li v-for="language in json.languages">{{language.language}} <span class="text-gray-500">- {{language.fluency}}</span></li>
