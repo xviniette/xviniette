@@ -15,91 +15,112 @@
     </head>
 
     <body v-scope @vue:mounted="getJSON">
-        <div v-if="json" class="max-w-[827px] mx-auto p-6 space-y-4">
-            <header class="flex gap-3 justify-between items-end pb-2 border-b-8 border-blue-100">
-                <div class="bg-blue-100 aspect-square rounded-xl size-24 overflow-hidden">
-                    <img class="w-full scale-[1.8] translate-y-3 saturate-150" :src="json.basics.image" />
-                </div>
+        <div v-if="json" class="max-w-[827px] my-0 mx-auto">
+            <header class="flex justify-between items-center border-b p-4">
                 <div class="flex-1">
-                    <h2 class="text-3xl font-bold uppercase text-gray-800">{{json.basics.name}}</h2>
-                    <h1 class="text-lg font-thin uppercase text-gray-800">{{json.basics.label}}</h1>
+                    <h2 class="text-3xl font-thin uppercase text-gray-800">{{json.basics.name}}</h2>
+                    <h1 class="text-4xl font-bold uppercase text-gray-800">{{json.basics.label}}</h1>
                 </div>
-
-                <ul class="flex flex-col text-sm text-gray-800 font-light text-right">
-                    <span>{{json.basics.email}}</span>
-
-                    <span>{{json.basics.phone}}</span>
-
-                    <span>{{json.basics.location.city}}, {{json.basics.location.address}}</span>
-
-                    <a :href="json.basics.url" target="_blank" class="hover:underline">{{json.basics.url}}</a>
-                </ul>
+                <div class="bg-blue-100 aspect-square rounded-xl size-28 overflow-hidden">
+                    <img class="w-full scale-[1.5] translate-y-4" :src="json.basics.image" />
+                </div>
             </header>
 
-            <p class="text-gray-800">{{json.basics.summary}}</p>
+            <main class="grid grid-cols-10">
+                <aside class="border-r col-span-4">
+                    <section class="p-4 border-b">
+                        <h3 class="font-bold uppercase text-lgtracking-widest text-blue-600 mb-4">Contact</h3>
 
-            <section>
-                <h3 class="font-bold uppercase text-lg tracking-widest text-blue-500 border-b-2 border-blue-100 mb-2">Skills</h3>
+                        <ul class="space-y-1 text-sm text-gray-800 font-light">
+                            <li class="flex gap-2 items-center">
+                                <a :href="'mailto:'+json.basics.email" class="hover:underline">{{json.basics.email}}</a>
+                            </li>
 
-                <ul class="space-y-1">
-                    <li v-for="skill in json.skills">
-                        <span class="text-gray-700 font-bold text-sm">{{skill.name}} :</span>
-                        <span class="bg-gray-100 px-2 py-1 rounded-lg text-gray-800 text-xs mr-1" v-for="keyword in skill.keywords">
-                            {{keyword}}
-                        </span>
-                    </li>
-                </ul>
-            </section>
+                            <li class="flex gap-4 items-center">
+                                <a :href="'tel:'+json.basics.phone" class="hover:underline">{{json.basics.phone}}</a>
+                            </li>
 
-            <section>
-                <h3 class="font-bold uppercase text-lg tracking-widest text-blue-500 border-b-2 border-blue-100 mb-2">experience</h3>
-                <div class="space-y-4">
-                    <div v-for="work in json.work">
-                        <div class="flex justify-between items-center text-gray-800">
-                            <div class="text-sm">
-                                <span class="font-bold text-sm uppercase tracking-wide">{{work.position}}</span> -
-                                <a :href="work.url" target="_blank" class="font-light hover:underline">{{work.name}}</a>
-                            </div>
-                            <div class="text-sm text-gray-600 text-right">
-                                <span>{{ formatDate(work.startDate)}}</span>
-                                <span v-if="formatDate(work.startDate) != formatDate(work.endDate)"
-                                    >- <span v-if="work.endDate">{{ formatDate(work.endDate)}}</span>
-                                    <span v-else>now</span>
-                                </span>
-                            </div>
-                        </div>
+                            <li class="flex gap-2 items-center">
+                                <span>{{json.basics.location.city}}, {{json.basics.location.address}}</span>
+                            </li>
 
-                        <p class="ml-8 text-sm text-gray-600">{{work.summary}}</p>
-
-                        <ul class="text-sm text-gray-500 font-light list-disc ml-16">
-                            <li v-for="highlight in work.highlights" v-html="highlight"></li>
+                            <li class="flex gap-2 items-center">
+                                <a :href="json.basics.url" class="hover:underline">{{json.basics.url}}</a>
+                            </li>
                         </ul>
-                    </div>
-                </div>
-            </section>
+                    </section>
 
-            <div class="grid grid-cols-2 gap-2">
-                <section class="p-4">
-                    <h3 class="font-bold uppercase text-lg tracking-widest text-blue-500 border-b-2 border-blue-100">Education</h3>
-                    <div class="">
-                        <div v-for="education in json.education">
-                            <div class="flex justify-between items-center">
-                                <h4 class="font-bold uppercase text-gray-800">{{education.studyType}}</h4>
-                                <span class="text-gray-600 text-sm">{{formatDate(education.endDate)}}</span>
+                    <section class="p-4 border-b">
+                        <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 mb-4">Skills</h3>
+
+                        <ul class="space-y-2">
+                            <li v-for="skill in json.skills">
+                                <span class="text-gray-700 font-light text-sm uppercase">{{skill.name}} :</span>
+                                <!-- <ul class="flex flex-wrap gap-2 ml-4"> -->
+                                <span class="bg-gray-100 px-2 py-1 rounded-lg text-gray-800 text-xs mr-1" v-for="keyword in skill.keywords">
+                                    {{keyword}}
+                                </span>
+                                <!-- </ul> -->
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="p-4 border-b">
+                        <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 mb-4">Education</h3>
+                        <div class="space-y-4">
+                            <div v-for="education in json.education">
+                                <div class="flex justify-between items-center">
+                                    <h4 class="font-bold uppercase text-gray-800">{{education.studyType}}</h4>
+                                    <span class="text-gray-600 text-sm">{{formatDate(education.endDate)}}</span>
+                                </div>
+                                <p class="text-xs text-gray-600">{{education.institution}}</p>
                             </div>
-                            <p class="text-xs text-gray-600">{{education.institution}}</p>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <section class="p-4">
-                    <h3 class="font-bold uppercase text-lg tracking-widest text-blue-500 border-b-2 border-blue-100">Languages</h3>
+                    <section class="p-4">
+                        <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 mb-4">Languages</h3>
 
-                    <ul class="text-gray-800 text-sm">
-                        <li v-for="language in json.languages">{{language.language}} <span class="text-gray-500">- {{language.fluency}}</span></li>
-                    </ul>
-                </section>
-            </div>
+                        <ul class="text-gray-800 text-sm">
+                            <li v-for="language in json.languages">
+                                {{language.language}} <span class="text-gray-500">- {{language.fluency}}</span>
+                            </li>
+                        </ul>
+                    </section>
+                </aside>
+
+                <article class="col-span-6">
+                    <section class="p-4 border-b">
+                        <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 mb-4">Profile</h3>
+                        <p class="text-sm italic text-gray-800">{{json.basics.summary}}</p>
+                    </section>
+
+                    <section class="p-4">
+                        <h3 class="font-bold uppercase text-lg tracking-widest text-blue-600 mb-2">experience</h3>
+                        <div class="space-y-8">
+                            <div v-for="work in json.work">
+                                <div class="flex justify-between items-center text-gray-800">
+                                    <h4 class="font-bold text">{{work.position}}</h4>
+                                    <div class="text-sm text-gray-600">
+                                        <span>{{ formatDate(work.startDate)}}</span>
+                                        <span v-if="formatDate(work.startDate) != formatDate(work.endDate)"
+                                            >- <span v-if="work.endDate">{{ formatDate(work.endDate)}}</span>
+                                            <span v-else>Present</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <a :href="work.url" target="_blank" class="text-sm text-gray-800 font-light hover:underline">{{work.name}}</a>
+
+                                <p class="text-sm text-gray-600">{{work.summary}}</p>
+
+                                <ul class="text-sm text-gray-500 font-light list-disc ml-8">
+                                    <li v-for="highlight in work.highlights" v-html="highlight"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </main>
         </div>
 
         <script type="module">
@@ -114,11 +135,6 @@
                 },
                 formatDate(date) {
                     return new Date(date).getFullYear()
-                },
-                nbYearXP() {
-                    if (!this.json) return 0
-
-                    return new Date(Date.now() - new Date(this.json.work.at(-1).startDate)).getUTCFullYear() - 1970
                 },
             }).mount()
         </script>
