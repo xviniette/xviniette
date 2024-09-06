@@ -35,7 +35,7 @@
             "name": "smooth.video",
             "position": "Founder & Developer",
             "startDate": "2023-09-01",
-            "highlights": ["Developed smooth.video", "Created multiple saas products"],
+            "highlights": ["Developed smooth.video", "Created multiple SaaS products"],
             "url": "https://smooth.video",
             "location": "Montpellier,  France"
         },
@@ -87,7 +87,7 @@
             "endDate": "2016-07-31",
             "highlights": [
                 "Created a machine learning model to determine players probability of purchase",
-                "Dveloped \"Rayman Adventures\" game backend"
+                "Developed \"Rayman Adventures\" game backend"
             ],
             "url": "https://www.ubisoft.com/en-us/studio/montpellier",
             "location": "Montpellier, France"
