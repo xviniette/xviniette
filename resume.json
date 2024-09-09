@@ -6,7 +6,7 @@
         "email": "vincent.bazia@gmail.com",
         "phone": "+33625953110",
         "url": "https://www.linkedin.com/in/vincentbazia",
-        "summary": "I'm a full stack web developer who can build apps from the ground up. I've worked mostly at startups so I am used to wearing many hats. I am a very product focused developer who prioritizes user feedback first and foremost. I'm generally very flexible when investigating new roles.",
+        "summary": "I'm a full-stack web developer with a strong background in startups, used to wearing many hats. I build apps end-to-end and prioritize user feedback. I'm flexible and open to new opportunities.",
         "location": {
             "city": "Montpellier",
             "countryCode": "FR",
@@ -35,9 +35,14 @@
             "name": "smooth.video",
             "position": "Founder & Developer",
             "startDate": "2023-09-01",
-            "highlights": ["Developed smooth.video", "Created multiple SaaS products"],
+            "highlights": [
+                "Implemented video rendering directly in the browser",
+                "Developed multiple SaaS products focused on video generation",
+                "More than 8,000 videos created"
+            ],
             "url": "https://smooth.video",
-            "location": "Montpellier,  France"
+            "location": "Montpellier,  France",
+            "skills": ["NextJS", "WebGL", "WebCodecs", "Tailwind"]
         },
         {
             "name": "ELIA GAMES",
@@ -45,20 +50,25 @@
             "startDate": "2022-02-28",
             "endDate": "2023-05-31",
             "highlights": [
-                "Created a platform for ads automation",
-                "Generate thousand of video ads",
-                "Create a platform between ads persons and creative"
+                "Created a playable Ads Editor",
+                "Developed a platform to manage and monitor ads across multiple advertising networks",
+                "Generated over 500 playable ads and 1,000+ video ads"
             ],
             "url": "https://www.elia.games/",
-            "location": "Montpellier,  France"
+            "location": "Montpellier,  France",
+            "skills": ["ReactJS", "NodeJS", "GCP", "SQL", "MongoDB", "Tailwind", "PhaserJS", "FFmpeg"]
         },
         {
             "name": "Digit RE group",
             "position": "FullStack Developer",
             "startDate": "2020-10-31",
             "endDate": "2022-02-28",
-            "summary": "Refactoring a 15+ years old service",
-            "highlights": ["Refactoring a 15+ years old service"],
+            "highlights": [
+                "Revamped a legacy service over 15 years old",
+                "Cleaned and optimized a large, denormalized database",
+                "Led a seamless migration process with zero downtime"
+            ],
+            "skills": ["ReactJS", "NodeJS", "AWS", "SQL", "MongoDB"],
             "url": "https://www.digitregroup.com",
             "location": "Montpellier,  France"
         },
@@ -67,7 +77,12 @@
             "position": "Co-Founder & FullStack Developer",
             "startDate": "2018-10-31",
             "endDate": "2020-07-31",
-            "highlights": ["Created a Mobile Game Editor", "Developed a social network : Instagram of games", "More than 2000 games created"],
+            "highlights": [
+                "Developed a mobile game editor",
+                "Built a social network similar to \"Instagram for games\"",
+                "Enabled the creation of over 2,000 games"
+            ],
+            "skills": ["VueJS", "NodeJS", "PhaserJS", "AWS", "Cordova", "SQL"],
             "url": "https://qyrolab.com",
             "location": "Montpellier,  France"
         },
@@ -76,19 +91,18 @@
             "position": "FullStack Engineer",
             "startDate": "2016-10-31",
             "endDate": "2018-10-31",
-            "highlights": ["Created a Serious Game Editor in the browser", "Developed a learning platform around Serious Games"],
+            "highlights": ["Developed a browser-based Serious Game Editor", "Created a learning platform focused on Serious Games"],
+            "skills": ["VueJS", "NodeJS", "PhaserJS", "AWS", "SQL"],
             "url": "https://axlr.com/",
             "location": "Montpellier, France"
         },
         {
             "name": "UBISOFT",
-            "position": "BackEnd Engineer",
+            "position": "Backend Developer",
             "startDate": "2016-02-28",
             "endDate": "2016-07-31",
-            "highlights": [
-                "Created a machine learning model to determine players probability of purchase",
-                "Developed \"Rayman Adventures\" game backend"
-            ],
+            "highlights": ["Trained a machine learning model to predict player purchase behavior", "Enhanced \"Rayman Adventures\" game backend"],
+            "skills": ["Angular", "Tensorflow", "NodeJS"],
             "url": "https://www.ubisoft.com/en-us/studio/montpellier",
             "location": "Montpellier, France"
         }
