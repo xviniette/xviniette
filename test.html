@@ -15,7 +15,7 @@
     </head>
 
     <body v-scope @vue:mounted="getJSON">
-        <div v-if="json" class="max-w-[827px] mx-auto space-y-3 p-8">
+        <div v-if="json" class="max-w-[827px] mx-auto space-y-3">
             <header class="flex gap-3 justify-between items-end pb-2 border-b-8 border-blue-100">
                 <div class="bg-stone-100 aspect-square rounded-xl size-24 overflow-hidden">
                     <img class="w-full scale-[1.8] translate-y-3 saturate-150" :src="json.basics.image" />
