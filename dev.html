@@ -81,7 +81,7 @@
                 <div class="">
                     <div v-for="education in json.education">
                         <div class="flex justify-between items-center">
-                            <h4 class="font-bold uppercase text-gray-800">{{education.studyType}}</h4>
+                            <h4 class="font-bold uppercase text-gray-800">{{education.studyType}} {{education.area}}</h4>
                             <span class="text-text-gray-600 text-sm">{{formatDate(education.endDate)}}</span>
                         </div>
                         <p class="text-xs text-text-gray-600">{{education.institution}}</p>
