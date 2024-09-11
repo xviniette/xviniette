@@ -126,7 +126,7 @@
     "skills": [
         {
             "name": "Frontend",
-            "keywords": ["Javascript", "React", "NextJS", "VueJS", "Tailwind", "WebGL", "HTML", "CSS"]
+            "keywords": ["Javascript", "React", "NextJS", "VueJS", "Tailwind", "WebGL", "Typescript", "HTML", "CSS"]
         },
         {
             "name": "Backend",
