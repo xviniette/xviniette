@@ -1,6 +1,6 @@
 {
     "version": 8,
-    "name": "Grayscale Map with Terrain",
+    "name": "Grayscale Map with Elevation Contours",
     "sources": {
         "mapbox": {
             "type": "vector",
@@ -10,13 +10,13 @@
             "type": "raster-dem",
             "url": "mapbox://mapbox.terrain-rgb",
             "tileSize": 512
+        },
+        "contours": {
+            "type": "vector",
+            "url": "mapbox://mapbox.mapbox-terrain-v2"
         }
     },
     "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
-    "terrain": {
-        "source": "terrain",
-        "exaggeration": 1.5
-    },
     "layers": [
         {
             "id": "background",
@@ -44,13 +44,13 @@
             }
         },
         {
-            "id": "hillshade",
-            "type": "hillshade",
-            "source": "terrain",
+            "id": "contours",
+            "type": "line",
+            "source": "contours",
+            "source-layer": "contour",
             "paint": {
-                "hillshade-highlight-color": "#ffffff",
-                "hillshade-shadow-color": "#d0d0d0",
-                "hillshade-exaggeration": 0.8
+                "line-color": "#a0a0a0",
+                "line-width": 1
             }
         },
         {
