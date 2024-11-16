@@ -1,13 +1,22 @@
 {
     "version": 8,
-    "name": "Grayscale Map",
+    "name": "Grayscale Map with Terrain",
     "sources": {
         "mapbox": {
             "type": "vector",
             "url": "mapbox://mapbox.mapbox-streets-v8"
+        },
+        "terrain": {
+            "type": "raster-dem",
+            "url": "mapbox://mapbox.terrain-rgb",
+            "tileSize": 512
         }
     },
     "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+    "terrain": {
+        "source": "terrain",
+        "exaggeration": 1.5
+    },
     "layers": [
         {
             "id": "background",
@@ -32,6 +41,16 @@
             "source-layer": "water",
             "paint": {
                 "fill-color": "#d0d0d0"
+            }
+        },
+        {
+            "id": "hillshade",
+            "type": "hillshade",
+            "source": "terrain",
+            "paint": {
+                "hillshade-highlight-color": "#ffffff",
+                "hillshade-shadow-color": "#d0d0d0",
+                "hillshade-exaggeration": 0.8
             }
         },
         {
