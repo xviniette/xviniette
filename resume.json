@@ -32,6 +32,15 @@
     },
     "work": [
         {
+            "name": "LEMPIRE",
+            "position": "Senior FullStack Developer",
+            "startDate": "2024-10-04",
+            "highlights": [],
+            "url": "https://lempire.com/",
+            "location": "Montpellier,  France",
+            "skills": ["MeteorJS", "MongoDB", "Blaze"]
+        },
+        {
             "name": "smooth.video",
             "position": "Founder & Developer",
             "startDate": "2023-09-01",
