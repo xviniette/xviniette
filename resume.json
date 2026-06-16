@@ -32,26 +32,27 @@
     },
     "work": [
         {
-            "name": "LEMPIRE",
-            "position": "Senior FullStack Developer",
-            "startDate": "2024-10-04",
-            "highlights": [],
-            "url": "https://lempire.com/",
-            "location": "Montpellier,  France",
-            "skills": ["MeteorJS", "MongoDB", "Blaze"]
-        },
-        {
             "name": "smooth.video",
             "position": "Founder & Developer",
             "startDate": "2023-09-01",
-            "highlights": [
-                "Implemented video rendering directly in the browser",
-                "Developed multiple SaaS products focused on video generation",
-                "More than 8,000 videos created"
-            ],
+            "highlights": ["Video rendering in the browser", "Developed multiple SaaS products focused on video generation", "More than 8,000 videos created"],
             "url": "https://smooth.video",
             "location": "Montpellier,  France",
             "skills": ["NextJS", "WebGL", "WebCodecs", "Tailwind"]
+        },
+        {
+            "name": "lemlist",
+            "position": "Senior FullStack Developer",
+            "startDate": "2024-10-04",
+            "highlights": [
+                "Developed all the VoIP part of the platform from scratch",
+                "Integrated complex third-party services (Twilio, Aircall, etc.)",
+                "Optimized the platform to handle thousands of simultaneous calls",
+                "Fraud management"
+            ],
+            "url": "https://lemlist.com/",
+            "location": "Remote",
+            "skills": ["React", "MongoDB", "MeteorJS", "Blaze"]
         },
         {
             "name": "ELIA GAMES",
@@ -135,15 +136,15 @@
     "skills": [
         {
             "name": "Frontend",
-            "keywords": ["Javascript", "React", "NextJS", "VueJS", "Tailwind", "WebGL", "Typescript", "HTML", "CSS"]
+            "keywords": ["Javascript", "Typescript", "React", "VueJS", "Tailwind", "WebGL"]
         },
         {
             "name": "Backend",
-            "keywords": ["Node.js", "PHP", "GO", "AdonisJS", "NestJS"]
+            "keywords": ["Node.js", "PHP", "GO", "Next.js"]
         },
         {
             "name": "Databases",
-            "keywords": ["PostgreSQL", "MySQL", "SQLite", "MongoDB", "Redis"]
+            "keywords": ["PostgreSQL", "SQLite", "MongoDB", "Redis"]
         },
         {
             "name": "Other",
